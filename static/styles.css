@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.parking-lot {
+    width: 200px;
+    height: 300px;
+    border: 2px solid black;
+    margin: auto;
+    position: relative;
+}
+
+#car {
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+    transition: transform 1s ease-in-out;
+}
+
+button {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}

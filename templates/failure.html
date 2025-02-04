@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Failed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h2>Payment Failed</h2>
+<p>Total Fee Charged: RM {{ fee }}</p>
+<p>Remaining Balance: RM {{ balance }}</p>
+<p>Insufficient balance. Please top up.</p>
+
+<a href="/">Back to Home</a>
+
+</body>
+</html>

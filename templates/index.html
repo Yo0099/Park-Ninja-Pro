@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park-Ninja Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h2>Your parking spot has been found at <strong>Level 1 No. {{ spot }}</strong></h2>
+<div class="parking-lot">
+    <img id="car" src="{{ url_for('static', filename='car.png') }}" alt="Car">
+</div>
+
+<button id="payNow">Pay Now</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let car = document.getElementById("car");
+
+        setTimeout(() => {
+            car.style.transform = "translateY(-150px)"; // Move up
+            setTimeout(() => {
+                car.style.transform += " rotate(90deg)"; // Turn right
+                car.style.transform += " translateX(50px)"; // Move into spot
+            }, 1000);
+        }, 1000);
+
+        document.getElementById("payNow").addEventListener("click", function() {
+            window.location.href = "/payment";
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h2>Payment Details</h2>
+<p>Parking Duration: {{ duration }} seconds</p>
+<p>Total Fee: RM {{ fee }}</p>
+<p>Available Balance: RM {{ balance }}</p>
+
+<form action="/process_payment" method="post">
+    <input type="hidden" name="fee" value="{{ fee }}">
+    <button type="submit" id="swipeUp">Swipe Up to Pay</button>
+</form>
+
+</body>
+</html>
